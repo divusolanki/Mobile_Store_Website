@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="home.php"><img src="images/Picsart_22-07-10_07-02-45-447.png" width="120px" style="margin-top: -4px;"></a>
+        </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <ul>
+                <li><a href="home.php" style="text-decoration:none;">HOME</a></li>
+                <li><a href="product.php" style="text-decoration: none;">PRODUCTS</a></li>
+                <li><a href="about.php" style="text-decoration: none;">ABOUT</a></li>
+                <li><a href="contactus.php" style="text-decoration: none;">CONTACT US</a></li>
+                <li><a href="feedback.php" style="text-decoration: none;">FEEDBACK</a></li>
+                <li><a href="account.php" style="text-decoration: none;">ACCOUNT</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+        <a href="cart.php"><img src="images/cart.png" width="28px" height="28px"></a>
+        </div>
+    </div>
+</header>
+
+<script type="text/javascript">
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('a');
+    const menuLength = menuItem.length
+    for(let i = 0; i<menuLength; i++){
+        if(menuItem[i].href === currentLocation){
+        menuItem[i].className = "active"
+        }
+    }
+</script>
+</body>
+</html>
